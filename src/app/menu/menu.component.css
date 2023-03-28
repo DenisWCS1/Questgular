@@ -1,0 +1,30 @@
+.navcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  width: 200px;
+}
+.navbar li {
+  padding:1em 0 1em 0;
+}
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+

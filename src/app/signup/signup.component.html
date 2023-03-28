@@ -1,0 +1,42 @@
+<!-- Masque du formulaire s'il est submit-->
+<div class="formContainer" *ngIf="!visible">
+  <h1>Sign Up component!</h1>
+  <form (submit)="toggleForm()">
+    <hr />
+
+    <div>
+      <label for="email">Email:</label>
+      <!-- récupération de l'email onSubmit -->
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="user.email"
+        placeholder="Enter Email"
+      />
+    </div>
+
+    <div>
+      <label for="password">Mot de passe:</label>
+      <!-- récupération du password onSubmit-->
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter Password"
+        required
+      />
+    </div>
+
+    <button type="submit" class="registerButton">Register</button>
+  </form>
+</div>
+<!-- Affichage du résultat si le formulaire est submit-->
+<div class="formContainer" *ngIf="visible">
+  <p>Merci voici les informations envoyées:</p>
+  <div>
+    <div>Email: {{ user.email }}</div>
+    <div>Mot de passe: {{ user.password }}</div>
+    <div>
+      <button (click)="toggleForm()" class="registerButton">Retour</button>
+    </div>
+  </div>
+</div>
