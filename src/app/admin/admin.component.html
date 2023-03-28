@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="card">
+    <div>
+      {{ title }} vous êtes
+      <ng-container *ngIf="isAdmin; then admin; else user"></ng-container>
+      <ng-template #admin
+        ><span [ngStyle]="{ color: 'red' }">administrateur</span></ng-template
+      >
+      <ng-template #user
+        ><span [ngStyle]="{ color: 'blue' }">utilisateur</span></ng-template
+      >
+    </div>
+    <div>
+      <button *ngIf="isAdmin">Edit</button>
+      <button>View</button>
+      <button (click)="toggleAdmin()">Easy admin</button>
+    </div>
+    <div>
+      <a
+        href="https://vibhas1892.medium.com/difference-between-ng-template-ng-container-and-ng-content-a1d264619655"
+        target="_blank"
+      >
+        Utilisation de ng-container et ng-template</a
+      >
+    </div>
+  </div>
+</div>
