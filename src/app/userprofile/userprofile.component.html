@@ -1,0 +1,34 @@
+<div class="content">
+  <div class="card">
+    <img [src]="user.photo" [alt]="user.firstName" style="width: 100%" />
+    <div class="container">
+      <h4>
+        <div>
+          <b> Nomn : {{ user.name }}</b>
+        </div>
+        <div>
+          <b> Prénom : {{ user.firstName }}</b>
+        </div>
+      </h4>
+
+      <div *ngIf="visible">{{ user.age }} ans</div>
+      <div>{{ user.quote }}</div>
+
+      <div>
+        <input
+          type="text"
+          [placeholder]="user.quote"
+          [(ngModel)]="quoteInput"
+          (blur)="updateQuote()"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          (click)="toggleAge()"
+          value="Afficher/Masquer mon âge"
+        />
+      </div>
+    </div>
+  </div>
+</div>
