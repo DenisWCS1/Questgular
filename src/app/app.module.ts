@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { MenuComponent } from './menu/menu.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ROUTES } from './app.routes';
+import { SigninComponent } from './signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { ROUTES } from './app.routes';
     AdminComponent,
     MenuComponent,
     SignUpComponent,
+    SigninComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],

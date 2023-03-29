@@ -1,33 +1,29 @@
 <div class="content">
   <div class="card">
-    <img [src]="user.photo" [alt]="user.firstName" style="width: 100%" />
+    <img [src]="user.picture.large" [alt]="" style="width: 100%" />
     <div class="container">
       <h4>
         <div>
-          <b> Nomn : {{ user.name }}</b>
+          <b> Nom : {{ user.name.last }} </b>
         </div>
         <div>
-          <b> Prénom : {{ user.firstName }}</b>
+          <b> Prénom : {{ user.name.first }} </b>
         </div>
       </h4>
 
-      <div *ngIf="visible">{{ user.age }} ans</div>
-      <div>{{ user.quote }}</div>
-
+      <div>{{ user.dob.age }} ans</div>
+      <div>Login : {{ user.login.username }}</div>
+      <div *ngIf="visible">Password : {{ user.login.password }}</div>
       <div>
         <input
-          type="text"
-          [placeholder]="user.quote"
-          [(ngModel)]="quoteInput"
-          (blur)="updateQuote()"
+          class="button"
+          type="button"
+          (click)="togglePassword()"
+          value="Mot de passe"
         />
       </div>
       <div>
-        <input
-          type="button"
-          (click)="toggleAge()"
-          value="Afficher/Masquer mon âge"
-        />
+        <button class="button" (click)="GetRandomUser()">Random</button>
       </div>
     </div>
   </div>
