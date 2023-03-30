@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ROUTES } from './app.routes';
 import { SigninComponent } from './signin/signin.component';
+import { MyFormComponent } from './my-form/my-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { SigninComponent } from './signin/signin.component';
     MenuComponent,
     SignUpComponent,
     SigninComponent,
+    MyFormComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],

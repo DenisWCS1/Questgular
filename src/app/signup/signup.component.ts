@@ -9,6 +9,8 @@ export class SignUpComponent {
   visible = false;
   // Objet user pour récup les valeurs du formulaire avec ngModel
   user = {
+    firstname: '',
+    lastname: '',
     email: '',
     password: '',
   };
