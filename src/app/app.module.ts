@@ -12,8 +12,14 @@ import { SignUpComponent } from './signup/signup.component';
 import { ROUTES } from './app.routes';
 import { SigninComponent } from './signin/signin.component';
 import { MyFormComponent } from './my-form/my-form.component';
+import { CatalogComponentComponent } from './catalog-component/catalog-component.component';
+import { AppKitchenComponent } from './app-kitchen/app-kitchen.component';
+import { AppMagicOvenComponent } from './app-magic-oven/app-magic-oven.component';
+import { DeveloperComponentComponent } from './DeveloperComponent/DeveloperComponent.component';
+import { SkillComponentComponent } from './SkillComponent/SkillComponent.component';
+
 @NgModule({
-  declarations: [
+  declarations: [				
     AppComponent,
     BlockComponent,
     UserProfile,
@@ -22,7 +28,12 @@ import { MyFormComponent } from './my-form/my-form.component';
     SignUpComponent,
     SigninComponent,
     MyFormComponent,
-  ],
+    CatalogComponentComponent,
+      AppKitchenComponent,
+      AppMagicOvenComponent,
+      DeveloperComponentComponent,
+      SkillComponentComponent
+   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
   bootstrap: [AppComponent],

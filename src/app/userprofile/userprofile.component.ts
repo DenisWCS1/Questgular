@@ -15,6 +15,7 @@ export class UserProfile implements OnInit {
       })
       .then((userdata) => {
         this.user = userdata.results[0];
+        console.log(this.user);
       });
   }
 

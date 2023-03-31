@@ -1,0 +1,22 @@
+<div class="content">
+  <div class="card">
+    <img [src]="dev.picture.large" [alt]="" style="width: 100%" />
+    <div class="container">
+      <h4>
+        <div>
+          <b> Nom : {{ dev.firstname }} </b>
+        </div>
+        <div>
+          <b> Prénom : {{ dev.lastname }} </b>
+        </div>
+      </h4>
+
+      <div>Age : {{ dev.age }} ans</div>
+      <div>Genre : {{ dev.gender }}</div>
+      <div>
+        <button class="button" (click)="GetRandomUser()">Random</button>
+      </div>
+    </div>
+    <app-skill *ngFor="let skill of dev.skills" [skill]="skill"></app-skill>
+  </div>
+</div>

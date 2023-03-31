@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>catalog-component works!</h1>
+  <ul>
+    <li *ngFor="let p of product">{{ p.name }}</li>
+  </ul>
+</div>
+
+<!--
+  <div>
+    <button (click)="toggle('tous')">Tous</button>
+    <button (click)="toggle('vides')">prix vides</button>
+    <button (click)="toggle('Promo')">Promo</button>
+  </div>
+  liste 1 Nbre : {{ produits.length }}
+  <div *ngFor="let produit of produits">
+    <div *ngIf="!produit.prix">
+      <h2>{{ produit.nom }}</h2>
+      <p>Prix : {{ produit.prix }}</p>
+      <p>Promo: {{ produit.promo }}</p>
+    </div>
+  </div>
+  <hr />
+  list 2 Nbre : {{ produits.length }}
+  <div *ngFor="let produit of produits">
+    <div *ngIf="produit.promo">
+      <h2>{{ produit.nom }}</h2>
+      <p>Prix : {{ produit.prix }}</p>
+      <p>Promo: {{ produit.promo }}</p>
+    </div>
+  </div>
+  <hr />
+  liste 3 Nbre : {{ produits.length }}
+  <div *ngFor="let produit of produits">
+    <h2>{{ produit.nom }}</h2>
+    <p>Prix : {{ produit.prix }}</p>
+    <p>Promo: {{ produit.promo }}</p>
+  </div>-->
